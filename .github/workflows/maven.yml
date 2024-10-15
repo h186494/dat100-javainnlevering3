@@ -21,6 +21,6 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn --batch-mode --update-snapshots compile
-    - name: Test Tabeller
+    - name: Test with Maven
       run: mvn --batch-mode --update-snapshots test 
     
