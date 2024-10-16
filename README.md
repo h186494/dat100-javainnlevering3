@@ -4,49 +4,63 @@
 
 Dere skal skrive Java-kode for klasser til et blogg-system på nettet. I tillegg skal dere skrive metoder som bruker input/output og filer for å lagre å hente inn blogg-innlegg.  
 
-Oppgavene på denne programmeringslab er **obligatoriske** og *kan* løses i grupper med opptil fire studenter. Deler av oppgave 3 samt 5, 6 og 7 er valgfrie. De valgfrie oppgaver kan gjøres uavhengig av hverandre og vil resultere i en helt grunnleggende web-applikasjon der det er mulig å vise bloggen i HTML format i en nettleser.
+Oppgavene på denne programmeringslab er **obligatoriske** og *kan* løses i grupper med opptil tre studenter. Deler av oppgave 3 samt 5, 6 og 7 er valgfrie. De valgfrie oppgaver kan gjøres uavhengig av hverandre og vil resultere i en helt grunnleggende web-applikasjon der det er mulig å vise bloggen i HTML format i en nettleser.
 
-Selve oppsettet av oppgavene med startkode og enhetstester er veldig lik programmeringsprosjektet. Husk å spørre om hjelp om der skulle være problemer med å kjøre enhetstestene eller noe som er uklart i oppgavene.
+Selve oppsettet av oppgavene med startkode og enhetstester er veldig lik Java Programmerings 2 oppgaven (tabeller og matriser). Husk å spørre om hjelp om der skulle være problemer med å kjøre enhetstestene eller noe som er uklart i oppgavene.
 
 ## Innlevering
 
-Besvarelsen leveres inn ved å pushe java-koden med oppgavene opp på den github-oppbevaringsplassen som blev opprettet når gruppen gjorde en "Use as Template" av github oppbevaringsplasen med startkode. Som besvarelse på Canvas legges inn **et skjermdump** som viser resultat av å kjøre enhetstester. I tillegg legges inn en **lenke til github oppbevaringsplassen** som kommentar til innleveringen. Se nederst på denne siden for hvordan et skjermdump kan se ut.
+Besvarelsen leveres inn ved å pushe java-koden med oppgavene opp på den github-oppbevaringsplassen som blev opprettet når gruppen gjorde en "Use as Template" av github oppbevaringsplasen med startkode. Som besvarelse på Canvas legges inn **lenke til github oppbevaringsplassen** som kommentar til innleveringen. 
 
 **Husk** at om dere har gjort oppgaven i gruppe skal dere levere som gruppe i Canvas. Se oppskrift for hvordan dette gjøres på Canvas.
 
-## Eclipse-prosjekt med startkode (Use this Template + Clone + Import)
-
-### Fork oppbevaringsplassen
+## Maven prosjekt med startkode (Use this Template + Clone + Import)
 
 Gå inn på github på oppbevaringsplassen som inneholder start-koden:
 
-https://github.com/dat100hib/dat100-jplab11-startkode.git
+https://github.com/dat100hib/dat100-javainnlevering3/
 
-Begynn med å opprette en kopi av denne oppbevaringsplassen ved å bruke "Use this Template" (se øverste høyre hjørne på github-websiden). Du vil da få en kopi av oppbevaringsplassen med startkoden på din egen github konto. Kun en i gruppen skal utføre "Use as template" og de andre gruppemedlemmer kan så gjøre en klone på denne kopien.
+Begynn med å opprette en kopi av denne oppbevaringsplassen ved å bruke *Use this template* (se øverste høyre hjørne på github-websiden). Du vil da få en kopi av oppbevaringsplassen med startkoden på din egen github konto. Du kan nå clone denne kopien ned på egen PC (bruk GitHub desktop). 
 
-### Klone og importere startkode i Eclipse
+Det er kun *en person* i gruppen som skal utføre *Use as template* på startkoden. Den som har utført *Use as template* kan etterfølgende gi tilgang til sin lokale kopi av oppbevaringsplassen til de andre gruppe-medlemmer ved å bruke *Settings* og *Manage Access* på GitHub. De andre gruppemedlemmer kan etterfølgende klone oppbevaringsplassen ved å bruke Github Desktop. På denne måten vil alle gruppe-medlemmer jobbe på samme oppbevaringsplass og dele koden som implementeres.
 
-Du må nå laste ned (klone) oppbevaringsplassen med kode som blev opprettet ovenfor. Det er **viktig** at du **ikke** kloner https://github.com/dat100hib/dat100-jplab11-startkode.git men den oppbevaringsplassen som du opprettet på din egen konto da du utførte "Use this template".
+### Klone og importere startkode og enhetstester
 
-1.	Velg *Code* på github-siden
+Du må nå laste ned (klone) oppbevaringsplassen med kode som blev opprettet ovenfor. Det er **viktig** at du **ikke** kloner https://github.com/dat100hib/dat100-javainnlevering3/ men den oppbevaringsplassen som du opprettet på din egen konto da du utførte "Use this template".
 
-2.	Velg lenken og last ned en kopi (clone) oppbevaringsplassen på samme måten som du har gjort i Github Desktop i tidligere oppgaver for å importere.
+1. Velg *Code* på github-siden
 
-Du skal nå ha et prosjekt i Eclipse med navnet `dat100-jplab11-startkode`
+2. Velg lenken og last ned en kopi (clone) oppbevaringsplassen på samme måten som du har gjort i Github Desktop i tidligere oppgaver for å importere.
 
-Startkoden har en pakke for hver oppgave.
+Start-koden ligger i er organisert slik at bygge-systemet Maven automatisk kan brukes til å kompilere koden og kjøre test i GitHub-skyen. 
 
-## Eclipse-prosjekt med enhetstester
+Dere skal derfor bruke *Import -> Maven -> Existing Maven Projects* for å importere koden inn i Eclipse - og altså ikke importere som vanlig Eclipse-prosjekt.
 
-For å kunne teste metodene som implementeres finnes et Eclipse-prosjekt med enhetstester via:
+Du skal nå ha et prosjekt i Eclipse med navnet `dat100-javainnlevering3`
 
-https://github.com/dat100hib/dat100-jplab11-testing.git
+Startkoden har en pakke for hver oppgave. Klassene inneholder starten på metodene dere skal implementere i oppgavene. Disse finnes under `src/main/java` i Maven-Eclipse-prosjektet.
 
-Du kloner oppbevaringsplassen og importerer inn i Eclipse på samme måten som tidligere men nå med oppbevaringsplassen gitt i lenken ovenfor. Du trenger **ikke** å gjøre "Use this template" på denne oppbevaringsplassen først siden du ikke trenger din egen kopi av oppbevaringsplassen på github.
+Prosjektet inneholder også JUnit-enhettester som kan brukes til å teste implementasjon av metodene etterhvert som de implementeres. Disse finner du under `src/test/java` prosjektet.
 
-Du skal nå ha et prosjekt i Eclipse med navnet `dat100-jplab11-testing` som inneholder en rekke enhetstester (unit-tests) implementert ved bruk av rammeverket JUnit. Det er ikke et krav i oppgaven å legge til flere enhetstester.
+Testene kan kjøres ved å høyre-klikke på filen som inneholder tester og velge `Run As -> JUnit Test`.
 
-Tester for en klasse `X.java` finnes i testklassen `TestX.java`. Kjørsel av enhetstester er tilsvarende som i programmeringsprosjektet.
+### Pushe code til Github 
+
+Etterhvert som metodene i oppgavene implementeres kan koden legges opp på GitHub ved å bruke *Commit* etterfulgt av *Push to origin* i GitHub Desktop. Om andre gruppemedlemmer skal ha tilgang til endringer som du har lagt opp, da må de utføre *Fetch origin* fra deres GitHub Desktop for å oppdatere deres lokale kopi av oppbevaringsplassen. 
+
+Om gruppemedlemmer har gjort samtidige endringer på filer og disse endringer er i konflikt med hverandre da må dere gjøre en *merge*.
+
+Når koden legges opp på GitHub ved å utføre en *push* vil GitHub sky-tjenesten automatisk kjøre testene og resultatet kan sees ved å gå inn under *Actions* på web-siden for oppbevaringsplassen på GitHub og velge seneste *workflow*.
+
+### GitHub co-pilot (frivillig)
+
+De som ønsker å teste og eksperimentere med bruken av github co-pilot: https://github.com/features/copilot som introdusert på forelesning kan gjøre det. 
+
+I Eclipse må en installere: https://marketplace.eclipse.org/content/copilot4eclipse kan gjøre dette i prosjektet. 
+
+Der finnes tilsvarende plug-ins også for VSCode og IntelliJ for de som bruker det.
+
+I etterkant av innleveringen kommer vi til å gjøre den liten undersøkelse omkring bruk og erfaringer med GitHub co-pilot.
 
 ## Oppgave 1 - Abstrakt klasse
 
@@ -193,7 +207,7 @@ Implementer en metode `public int[] search(String user, String ord)` som returne
 
 For å løse denne oppgaven anbefales det å lese avsnitt 7.1 og 7.4 i java-boken og se på notater fra forelesninger om filer og om unntak. Denne oppgaven samt oppgave 5 nedenfor er også relatert til:
 
-https://github.com/dat100hib/dat100public/blob/master/programmering/jplab10/JP10.md#oppgave-b1---filer-og-unntak
+https://github.com/dat100hib/dat100public/blob/master/programmering/jplab10/JP10.md#oppgave-1---filer-og-unntak
 
 Implementer følgende metode i klassen `SkrivBlogg.java`:
 
