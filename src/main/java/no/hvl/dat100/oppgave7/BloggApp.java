@@ -21,7 +21,7 @@ public class BloggApp {
 				"Lars, hva er status for den siste obligatoriske innleveringen?");
 		Bilde innlegg2 = new Bilde(2, "Lars", "24-10",
 				"Ser bra ut! - har lagt ved output-eksempel fra enhetstester",
-				"https://github.com/dat100hib/dat100-javainnlevering3/blob/master/assets/markdown-img-paste-20191024230708150.png");
+				"https://home.hvl.no/ansatte/lmkr/dat100/junitscreenshot.png");
 
 		innlegg1.doLike();
 		innlegg1.doLike();
